@@ -3,7 +3,16 @@
     <v-system-bar color="primary darken-3"></v-system-bar>
     <v-app-bar app color="primary" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>{{ $t("Navbar.title") }}</v-toolbar-title>
+      <v-toolbar-title class="d-flex align-center">
+  <img
+    src="/img/logo.png"
+    alt="Get5 CS2"
+    height="36"
+    class="mr-3"
+    style="filter: drop-shadow(0 0 6px rgba(240, 180, 41, 0.6));"
+  />
+  <span class="logo-text">Get5 CS2</span>
+</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn rounded :href="apiUrl + '/auth/steam'" v-if="user.id == null">
         <img src="/img/login_small.png" v-if="user.id == null" />

@@ -2,7 +2,9 @@
   <v-app>
     <Navbar :user="user" />
     <v-main>
-      <router-view :key="$route.path" />
+      <transition name="page-fade" mode="out-in">
+        <router-view :key="$route.path" />
+      </transition>
     </v-main>
     <Footer />
   </v-app>

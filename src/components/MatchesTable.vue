@@ -26,28 +26,30 @@
         {{ item.owner }}
       </router-link>
     </template>
-    <template v-slot:item.team1_string="{ item }">
-      <router-link
-        :to="{ path: '/teams/' + item.team1_id }"
-        v-if="item.team1_id !== null"
-      >
-        {{ item.team1_string }}
-      </router-link>
-      <div v-else>
-        {{ item.team1_string }}
-      </div>
-    </template>
-    <template v-slot:item.team2_string="{ item }">
-      <router-link
-        :to="{ path: '/teams/' + item.team2_id }"
-        v-if="item.team2_id !== null"
-      >
-        {{ item.team2_string }}
-      </router-link>
-      <div v-else>
-        {{ item.team2_string }}
-      </div>
-    </template>
+<template v-slot:item.team1_string="{ item }">
+  <router-link
+    :to="{ path: '/teams/' + item.team1_id }"
+    v-if="item.team1_id !== null"
+    class="team-ct"
+  >
+    {{ item.team1_string }}
+  </router-link>
+  <div v-else class="team-ct">
+    {{ item.team1_string }}
+  </div>
+</template>
+<template v-slot:item.team2_string="{ item }">
+  <router-link
+    :to="{ path: '/teams/' + item.team2_id }"
+    v-if="item.team2_id !== null"
+    class="team-t"
+  >
+    {{ item.team2_string }}
+  </router-link>
+  <div v-else class="team-t">
+    {{ item.team2_string }}
+  </div>
+</template>
     <template v-slot:top>
       <div v-if="isMyMatches && isThereCancelledMatches">
         <v-toolbar flat>

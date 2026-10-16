@@ -1,0 +1,197 @@
+/* ============================================
+ *  CS2 Theme for Get5Vue
+ *  ============================================ */
+
+/* ---------- Шрифт ---------- */
+.v-application {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ---------- Фон страницы ---------- */
+body {
+    background-color: #0a0c10;
+    background-image:
+    radial-gradient(circle at 20% 20%, rgba(240, 180, 41, 0.05), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(91, 155, 213, 0.05), transparent 40%),
+    linear-gradient(rgba(30, 34, 43, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 34, 43, 0.5) 1px, transparent 1px);
+    background-size: auto, auto, 40px 40px, 40px 40px;
+    background-attachment: fixed;
+}
+
+/* ---------- Карточки ---------- */
+.v-card {
+    background: rgba(30, 34, 43, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.v-card:hover {
+    box-shadow: 0 0 20px rgba(240, 180, 41, 0.2) !important;
+    border-color: rgba(240, 180, 41, 0.4);
+}
+
+/* ---------- Заголовки ---------- */
+h1, h2, h3, .v-card-title {
+    background: linear-gradient(45deg, #f0b429, #ffd700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* ---------- Таблицы ---------- */
+.v-data-table {
+    background: rgba(20, 23, 28, 0.95) !important;
+}
+
+.v-data-table th {
+    background-color: #1e222b !important;
+    color: #f0b429 !important;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.v-data-table tr:hover {
+    background: rgba(240, 180, 41, 0.05) !important;
+}
+
+/* ---------- Кнопки ---------- */
+.v-btn {
+    text-transform: none;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.v-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(240, 180, 41, 0.3);
+}
+
+/* ============================================
+ *  БОКОВОЕ МЕНЮ — всегда сверху, всегда кликабельно
+ *  ============================================ */
+
+.v-navigation-drawer {
+    background-color: #15171c !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+}
+
+.v-navigation-drawer .v-list,
+.v-navigation-drawer .v-list-item,
+.v-navigation-drawer .v-list-item__content,
+.v-navigation-drawer .v-list-item__title,
+.v-navigation-drawer a {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Основной контент — под меню */
+.v-main {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Отключаем все возможные оверлеи */
+.v-navigation-drawer__scrim,
+.v-overlay,
+.v-overlay__scrim {
+    pointer-events: none !important;
+}
+
+/* ============================================
+ *  Кастомный скроллбар
+ *  ============================================ */
+
+/* Для Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0c10;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f0b429;
+    border-radius: 4px;
+    border: 2px solid #0a0c10;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffd700;
+}
+
+/* Для Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #f0b429 #0a0c10;
+}
+
+/* ============================================
+ *  Анимации переходов между страницами
+ *  ============================================ */
+
+.page-fade-enter-active,
+.page-fade-leave-active {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.page-fade-enter {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.page-fade-leave-to {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+/* ============================================
+ *  Цвета команд в стиле CS2
+ *  ============================================ */
+
+/* CT — синий (как у Counter-Terrorist) */
+.team-ct,
+.team-ct .v-icon,
+td.team-ct,
+.v-chip.team-ct {
+    color: #5b9bd5 !important;
+    font-weight: 600;
+}
+
+/* T — жёлтый/золотой (как у Terrorist) */
+.team-t,
+.team-t .v-icon,
+td.team-t,
+.v-chip.team-t {
+    color: #f0b429 !important;
+    font-weight: 600;
+}
+
+/* Подсветка при наведении */
+.v-data-table tr:hover .team-ct {
+    color: #7ab8f5 !important;
+}
+
+.v-data-table tr:hover .team-t {
+    color: #ffd700 !important;
+}
+
+/* ============================================
+ *  Логотип в навбаре
+ *  ============================================ */
+
+.logo-text {
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #f0b429, #ffd700);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
